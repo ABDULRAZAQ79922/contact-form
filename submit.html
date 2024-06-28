@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Submitted Information</h2>
+        <p id="displayFullName"></p>
+        <p id="displayEmailAddress"></p>
+        <p id="displayMessageText"></p>
+    </div>
+    <script>
+        const formData = JSON.parse(localStorage.getItem('contactFormData'));
+
+        document.getElementById('displayFullName').textContent = `Full Name: ${formData.fullName}`;
+        document.getElementById('displayEmailAddress').textContent = `Email Address: ${formData.emailAddress}`;
+        document.getElementById('displayMessageText').textContent = `Message: ${formData.messageText}`;
+    </script>
+</body>
+</html>
